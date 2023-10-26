@@ -6,7 +6,7 @@ from flask import Flask, request, Response
 from healthinsurance.HealthInsurance import HealthInsurance
 
 
-model = pickle.load( open('models/model_LGBM.pkl','rb'))
+model = pickle.load( open('src/models/model_LGBM.pkl','rb'))
 
 app = Flask(__name__)
 
