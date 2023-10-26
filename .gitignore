@@ -10,10 +10,10 @@ __pycache__/
 
 # C extensions
 *.so
-*.pkl
+#*.pkl
 
 # Data
-*.csv
+#*.csv
 
 # Distribution / packaging
 .Python
