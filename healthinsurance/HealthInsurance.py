@@ -17,14 +17,16 @@ class HealthInsurance:
     def data_cleaning(self, df1):
         cols_old = ['id', 'Gender', 'Age', 'Driving_License', 'Region_Code',
        'Previously_Insured', 'Vehicle_Age', 'Vehicle_Damage', 'Annual_Premium',
-       'Policy_Sales_Channel', 'Vintage', 'Response']
+       'Policy_Sales_Channel', 'Vintage']
 
         snakecase = lambda x: inflection.underscore(x)
         cols_new = list( map(snakecase, cols_old) )
 
-        df1.columns = cols_new
+        df3 = df1.copy()
+
+        df3.columns = cols_new
         
-        return df1
+        return df3
     
     def feature_engineering(self, df2):
         
