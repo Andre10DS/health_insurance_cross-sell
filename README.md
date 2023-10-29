@@ -109,19 +109,31 @@ A empresa tem restrições de capacidade e custo para realizar a abordagem em to
 
 # 4. Top 3 Data Insights
 
-**Hypothesis 01:**
+A análise exploratória dos dados, juntamente com as analises descritivas, permite um melhor entendimento dos dados e possibilita a verificação de insights que possam ser utilizados pelos negócios. Os top três insights foram:
 
-**True/False.**
+H1: Pessoas com mais de 40 anos são mais propensas a contratar um seguro de veículo.
 
-**Hypothesis 02:**
+** Colocar img Percentual_acima_e_abaixo_de_40**
 
-**True/False.**
+Hipótese verdadeira: Pessoas com mais de 40 anos são mais propensas a contratar um seguro. Verificou-se que 63,22% das pessoas que declararam ter interesse em contratar o seguro tinham 40 anos ou mais.
 
-**Hypothesis 03:**
+H2: Os homens se interessaram mais pela proposta do que as mulheres.
 
-**True/False.**
+** Colocar img Homens_mais_interessados_na_proposta**
+
+Hipótese verdadeira: Os homens são mais interessados em adquirir a proposta do que as mulheres. Cerca de 61,2% da base que respondeu positivo eram homens.
+
+
+H3: Dos clientes interessados, tinham carros com mais de dois anos.
+
+** Colocar img Clientes_interessados**
+
+Hipótese falsa: A demanda ocorre para veículos com idade entre 1 e 2 anos. Em relação à base de dados, esse tempo é considerado "mediano". O período de 1 a 2 anos concentra 74% dos interessados.
+
 
 # 5. Machine Learning Model Applied
+
+
 
 # 6. Machine Learning Modelo Performance
 
