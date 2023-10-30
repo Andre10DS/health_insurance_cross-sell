@@ -133,9 +133,58 @@ Hipótese falsa: A demanda ocorre para veículos com idade entre 1 e 2 anos. Em 
 
 # 5. Machine Learning Model Applied
 
+Para o desenvolvimento do projeto foram utilizadados três algoritmos de machine learning sendo eles o KNN, Regressão logística e LightGBM. Para escolher o melhor modelo para o projeto foram seguindos as seguintes etapas:
 
+1. Realização das escolhas dos melhores parametros de cada modelo utlizando o metodo Bayseian Search com validação cruzada sobre os dados de treino utilizando o K top de 20000 amostras.
+2. Após a verificação dos melhores parametros, cada modelo foi treinado com os dados de treino e verificado a performance sobre os dados de validação.
+3. Foram obtidos as performances de cada modelo por percentual da base. As metricas utilizadas foram a precision k_top e a recall K_top. Segue abaixo os resultados obtidos:
+
+Precision@k: conta quantas previsões foram corretas até k e divide por todas as previsões feitas até k.
+
+|Precision|K-nearest neighbors|Logistic regression |LightGBM |
+|----------------|:----------:|:-------------------:|:---------------------------------:|
+| 10% (6097) | 0.32 | 0.30 | 0.38 |
+| 20% (12195) | 0.32 | 0.28 | 0.35 |
+| 30% (18293) | 0.29 | 0.26 | 0.31 |
+| 40% (24391)| 0.26 | 0.27 | 0.28 |
+
+Recall@k: conta quantas previsões foram corretas até k e divide por todos os exemplos verdadeiros.
+
+|Recall|K-nearest neighbors|Logistic regression |LightGBM |
+|----------------|:----------:|:-------------------:|:---------------------------------:|
+| 10% (6097) | 0.26 | 0.24 | 0.31 |
+| 20% (12195) | 0.50 | 0.46 | 0.57 |
+| 30% (18293) | 0.72 | 0.65 | 0.78 |
+| 40% (24391)| 0.87 | 0.88 | 0.92 |
+
+O modelo que apresentou a melhor performance foi o LightGBM.
 
 # 6. Machine Learning Modelo Performance
+
+Nesta etapa um dos modelos de ML utilizados na fase de treino foi selecionada e avalida sobre dados de teste para simular o ambiente de produção. O modelo selecionado para implementação foi o LightGBM. Segue abaixo os resultados obtidos:
+
+|Precision|LightGBM - Treino|LightGBM - Teste |
+|----------------|:----------:|:-------------------:|
+| 10%  | 0.38 | 0.38 |
+| 20%  | 0.35 | 0.35 |
+| 30%  | 0.31 | 0.31 |
+| 40% | 0.28 | 0.28 |
+
+
+|Recall|LightGBM - Treino|LightGBM - Teste |
+|----------------|:----------:|:-------------------:|
+| 10%  | 0.31 | 0.31 |
+| 20%  | 0.57 | 0.57 |
+| 30%  | 0.78 | 0.78 |
+| 40% | 0.92 | 0.92 |
+
+Os resultados obtidos com os dados de teste mostraram-se próximos aos dados de treino, sendo que para se possa verificar alguma diferença é necessário ampliar as casas decimais.
+
+A curva de ganho acumulado é outra ferramenta que pode demonstar a performance do modelo. Ela representa quantas clientes interresados estão em cada percentual da base ordenada pelo modelo. Um exemplo é quando analisamos que nos 20% da base ordenada se encontra aproximadamente 57% dos clientes interessados.
+
+
+A curva de lift demonstra o quando o modelo utilizada é mais eficiente do que o modelo de média. Desta forma, ao analisa o ponto 2 verificamos que ele é quase 3 vezes melhor do que o modelo de média.
+
 
 # 7. Business Results
 
