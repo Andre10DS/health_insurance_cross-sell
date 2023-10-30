@@ -188,6 +188,20 @@ A curva de lift demonstra o quando o modelo utilizada é mais eficiente do que o
 
 # 7. Business Results
 
+A base de teste foi de 76222 sendo que destes um número de 9342 mostraram-se interessados. O custo de aquisição de clientes (CAC) com base no site xxxxx é de  $ 500 para seguros de veículo e o LTV é de 500 segundo o site yyyyy. Desta forma, chegamos ao seguintes cenários para cada percentual da base de novos clientes:
+
+|% da base|@k pessoas interessadas|Total de pessoas interessadas | Lucro - modelo atual | Lucro - novo modelo| Ganho / perda |
+|----------------|:----------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|
+| 10%  | 2969 | 9342	| 85,990 | 1,103,390 | 1,017,400 |
+| 20%  | 5377 | 9342	| 171,980  | 1,926,280 | 1,754,300 |
+| 30%  | 7304 | 9342	| 257,970  | 2,508,670 | 2,250,700 |
+| 40% | 8636 | 9342	| 343,960  | 2,793,560 | 2,449,600 |
+| 50% | 9250 | 9342	| 429,950  | 2,719,450 | 2,289,500 |
+
+Conforme as premissas de negócio, a estrutura terá a capacidade de atendimento de somente 20% (15244) da base de novos clientes. Desta forma, com a utilização do modelo contruído neste projeto o lucro sairia de $ 171,980 para $ 1,926,280 representando um ganho de $ 1,754,300.
+
+### Entrega - Planilha Google Sheets
+
 # 8. Conclusions
 
 # 9. Lessons Learned
