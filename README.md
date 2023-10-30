@@ -1,6 +1,6 @@
 # Health Insurance Cross-Sell
 
-## This project aims to order a potential client list by propensity score
+## Este projeto visa ordenar uma lista de clientes potenciais por pontuação de propensão
 O projeto refere-se a uma empresa ficticia de seguros de vida que deseja realizar uma estratégia de cross-sell para um novo produto de seguro veicular.
 
 Para executar a estratégia será desenvolvido um modelo de ranqueamento de clientes que apresetam potecial para adquirir o seguro veicular.
@@ -9,11 +9,11 @@ O projeto utiliza uma base de dados de clientes de uma empresa de seguros de sa�
 
 A estratégia de cross-sell é uma abordagem de marketing e vendas que visa oferecer produtos ou serviços complementares aos clientes, com base em suas compras ou preferências anteriores. Isso não apenas aumenta a receita da venda atual, mas também pode melhorar a satisfação do cliente, pois ele percebe que a empresa está atendendo às suas necessidades e oferecendo soluções abrangentes.
 
-# 1. Business Problem.
+# 1. Problema de negócio.
 A empresa tem restrições de capacidade e custo para realizar a abordagem em toda a base de novos. Desta forma, deve ser criado alguma ferramenta que traga mais precisão, reduza o tempo e o custo do processo de venda.
 
 
-# 2. Business Assumptions.
+# 2. Premissas de negócio.
 
 1. A empresa tem restrições de capacidade e, desta forma, não consegue atender todos os novos clientes da base.
 2. O resultado deverá ser entregue em google sheets.
@@ -44,7 +44,7 @@ A empresa tem restrições de capacidade e custo para realizar a abordagem em to
 ## 4.3 Processo.
 ### 4.3.1. Estratégia da solução.
 
-**Step 01. Data Description:**
+**Step 01. Descrição dos dados:**
 
   - Realizar a descrição das colunas.
   - Maperar as hipoteses.
@@ -53,22 +53,22 @@ A empresa tem restrições de capacidade e custo para realizar a abordagem em to
   - Checar os NA e realizar e o replace caso necessário.
   - Relizar a descrição estatisticas dos dados númericos e avaliar distorções.
 
-**Step 02. Feature Engineering:**
+**Step 02. Criação de Features:**
 
   - Realizar a construção de novos features ou o ajuste dos dados daquelas existentes.
 
-**Step 03. Data Filtering:**
+**Step 03. Filtragem de dados:**
 
   - Filtragem de dados que possuem restrições de negócio. (Nesta base de dados não foi verificado a necessidade de realizar tal ação)
 
-**Step 04. Exploratory Data Analysis:**
+**Step 04. Analise exploratória dos dados:**
 
   - Realizar a análise univariada.
   - Realizar a análise bivariada.
   - Realizar a análise multivariada.
   - Estudo das correlações de person e cramer v.
 
-**Step 05. Data Preparation:**
+**Step 05. Preparação dos dados:**
 
   - Realizar a separação dos dados de treino e validação.
   - Padronizar os dados númericos com a distribuição normal
@@ -77,13 +77,13 @@ A empresa tem restrições de capacidade e custo para realizar a abordagem em to
   - Aplicar transormações de natureza.
   - Realizar as transformações nos dados de validação.
 
-**Step 06. Feature Selection:**
+**Step 06. Seleção de Features:**
 
   - Aplicar tecnicas de seleção de features com base na relevancia e importância para o desenvolvimento do projeto.
   - Verificar se as features selecionadas pela técnica tem alguma relação com as analises realizadas na EDA.
   - Selecionar as features com maior relevancia para o modelo.
 
-**Step 07. Machine Learning Modelling e Hyperparameter Fine Tunning:**
+**Step 07. Modelo de Machine Learning e Hyperparameter Fine Tunning:**
 
   - Criar bases de possíveis valores de hiperparametros para cada modelo. Foram utilizados os modelos KNN, Regressão logistica e LightGBM.
   - Criar o algoritmode stratificação da base de treino para realizar o cross validation.
@@ -93,12 +93,12 @@ A empresa tem restrições de capacidade e custo para realizar a abordagem em to
   - Juntar os dados de treino e validação e realizar um novo treinamento do modelo escolhido.
   - Aplicar o modelo escolhido nos dados de teste e cruzar performance atingida com a performance do modelo em treinamento.
 
-**Step 08. Convert Model Performance to Business Values:**
+**Step 08. Conversão da performance do modelo em resultados de negócio:**
 
   - Desdobrar os resultados do modelo em performance de negócio.
   - Traduzir a performance em retorno financeiro para a empresa. 
 
-**Step 10. Deploy Modelo to Production:**
+**Step 10. Deploy do modelo em produção:**
 
   - Criar uma classe do modelo para realizar todo pipeline de dados
   - Criar uma API para rodar e consultar o modelo criado.
@@ -107,7 +107,7 @@ A empresa tem restrições de capacidade e custo para realizar a abordagem em to
   - Publicar o modelo e API no Render.
   - Criar o script de consulta no google sheets atraves do Apps scripts.
 
-# 4. Top 3 Data Insights
+# 4. Top 3 Insights
 
 A análise exploratória dos dados, juntamente com as analises descritivas, permite um melhor entendimento dos dados e possibilita a verificação de insights que possam ser utilizados pelos negócios. Os top três insights foram:
 
@@ -131,7 +131,7 @@ H3: Dos clientes interessados, tinham carros com mais de dois anos.
 Hipótese falsa: A demanda ocorre para veículos com idade entre 1 e 2 anos. Em relação à base de dados, esse tempo é considerado "mediano". O período de 1 a 2 anos concentra 74% dos interessados.
 
 
-# 5. Machine Learning Model Applied
+# 5. Aplicação dos modelos de Machine Learning
 
 Para o desenvolvimento do projeto foram utilizadados três algoritmos de machine learning sendo eles o KNN, Regressão logística e LightGBM. Para escolher o melhor modelo para o projeto foram seguindos as seguintes etapas:
 
@@ -145,6 +145,7 @@ Precision@k: conta quantas previsões foram corretas até k e divide por todas a
 |----------------|:----------:|:-------------------:|:---------------------------------:|
 | 10% (6097) | 0.32 | 0.30 | 0.38 |
 | 20% (12195) | 0.32 | 0.28 | 0.35 |
+| 25% (15244) | 0.30 | 0.27 | 0.33 |
 | 30% (18293) | 0.29 | 0.26 | 0.31 |
 | 40% (24391)| 0.26 | 0.27 | 0.28 |
 
@@ -154,12 +155,13 @@ Recall@k: conta quantas previsões foram corretas até k e divide por todos os e
 |----------------|:----------:|:-------------------:|:---------------------------------:|
 | 10% (6097) | 0.26 | 0.24 | 0.31 |
 | 20% (12195) | 0.50 | 0.46 | 0.57 |
+| 25% (15244) | 0.61 | 0.55 | 0.67 |
 | 30% (18293) | 0.72 | 0.65 | 0.78 |
 | 40% (24391)| 0.87 | 0.88 | 0.92 |
 
 O modelo que apresentou a melhor performance foi o LightGBM.
 
-# 6. Machine Learning Modelo Performance
+# 6. Performance do modelo de Machine Learning escolhido
 
 Nesta etapa um dos modelos de ML utilizados na fase de treino foi selecionada e avalida sobre dados de teste para simular o ambiente de produção. O modelo selecionado para implementação foi o LightGBM. Segue abaixo os resultados obtidos:
 
@@ -167,6 +169,7 @@ Nesta etapa um dos modelos de ML utilizados na fase de treino foi selecionada e 
 |----------------|:----------:|:-------------------:|
 | 10%  | 0.38 | 0.38 |
 | 20%  | 0.35 | 0.35 |
+| 25%  | 0.33 | 0.33 |
 | 30%  | 0.31 | 0.31 |
 | 40% | 0.28 | 0.28 |
 
@@ -175,6 +178,7 @@ Nesta etapa um dos modelos de ML utilizados na fase de treino foi selecionada e 
 |----------------|:----------:|:-------------------:|
 | 10%  | 0.31 | 0.31 |
 | 20%  | 0.57 | 0.57 |
+| 25%  | 0.67 | 0.68 |
 | 30%  | 0.78 | 0.78 |
 | 40% | 0.92 | 0.92 |
 
@@ -186,24 +190,31 @@ A curva de ganho acumulado é outra ferramenta que pode demonstar a performance 
 A curva de lift demonstra o quando o modelo utilizada é mais eficiente do que o modelo de média. Desta forma, ao analisa o ponto 2 verificamos que ele é quase 3 vezes melhor do que o modelo de média.
 
 
-# 7. Business Results
+# 7. Resultados para o negócio
 
-A base de teste foi de 76222 sendo que destes um número de 9342 mostraram-se interessados. O custo de aquisição de clientes (CAC) com base no site xxxxx é de  $ 500 para seguros de veículo e o LTV é de 500 segundo o site yyyyy. Desta forma, chegamos ao seguintes cenários para cada percentual da base de novos clientes:
+A base de teste foi de 76222 sendo que destes um número de 9342 mostraram-se interessados. O custo total do cliente (TCOC) é US$ 324 com base no relatório da Mckinsey. Já o LTV médio para seguros automobilítico é de US$ 1524 segundo o mesmo relatório. Desta forma, temos os seguintes cenários
 
 |% da base|@k pessoas interessadas|Total de pessoas interessadas | Lucro - modelo atual | Lucro - novo modelo| Ganho / perda |
 |----------------|:----------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| 10%  | 2969 | 9342	| 85,990 | 1,103,390 | 1,017,400 |
-| 20%  | 5377 | 9342	| 171,980  | 1,926,280 | 1,754,300 |
-| 30%  | 7304 | 9342	| 257,970  | 2,508,670 | 2,250,700 |
-| 40% | 8636 | 9342	| 343,960  | 2,793,560 | 2,449,600 |
-| 50% | 9250 | 9342	| 429,950  | 2,719,450 | 2,289,500 |
+| 10%  | 2969 | 9342	| -1,045,872.0 | 2,055,163.2 | 3,101,035.2 |
+| 20%  | 5377 | 9342	| -2,091,744.0  | 3,255,362.4 | 5,347,106.4 |
+| 25%  | 6416 | 9342	| -2,614,680.0  | 3,604,002 | 6,218,682.0 |
+| 30%  | 7304 | 9342	| -3,137,616.0  | 3,722,517.6 | 6,860,133.6 |
+| 40% | 8636 | 9342	| -4,183,488.0  | 3,282,892.8 | 7,466,380.8 |
+| 50% | 9250 | 9342	| -5,229,360.0  | 1,749,036.0 | 6,978,396.0 |
 
-Conforme as premissas de negócio, a estrutura terá a capacidade de atendimento de somente 20% (15244) da base de novos clientes. Desta forma, com a utilização do modelo contruído neste projeto o lucro sairia de $ 171,980 para $ 1,926,280 representando um ganho de $ 1,754,300.
+Conforme as premissas de negócio, a estrutura terá a capacidade de realizar no máximo 20000 atendimentos. Desta forma, foi escolhido o cenário onde será executado as ações de vendas para somente 25% da base, ou seja, cerca de 19055 pessoas. Desta forma, com a utilização do modelo contruído neste projeto o resultado sairia de US$ -2,614,680 para US$ 3,604,002 representando um ganho de US$ 6,218,682.
 
 ### Entrega - Planilha Google Sheets
 
-# 8. Conclusions
+# 8. Conclusão
 
-# 9. Lessons Learned
+Com base no projeto e resultados apresentados pode ser concluído que os resultados do planejamento foram atingidos.
 
-# 10. Next Steps to Improve
+Ao utilizar as ferramentas criadas a empresa poderá aumentar sua competividade, ser mais objetiva e reduzir os custos melhorando o resultado da organização.
+
+
+# 9. Próximos passos
+
+- Incluir novas features visando a melhoria do modelo.
+- Criar a combinação de novas features.
