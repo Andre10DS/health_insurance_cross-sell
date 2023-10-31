@@ -113,20 +113,20 @@ A análise exploratória dos dados, juntamente com as analises descritivas, perm
 
 H1: Pessoas com mais de 40 anos são mais propensas a contratar um seguro de veículo.
 
-** Colocar img Percentual_acima_e_abaixo_de_40**
+<img src="https://github.com/Andre10DS/health_insurance_cross-sell/blob/main/img/Percentual_acima_e_abaixo_de_40.png?raw=true" alt="Perc_acima_e_abaixo" title="Grafico do percentual acima e abaixo de 40 anos" align="center" height="500" class="center"/>
 
 Hipótese verdadeira: Pessoas com mais de 40 anos são mais propensas a contratar um seguro. Verificou-se que 63,22% das pessoas que declararam ter interesse em contratar o seguro tinham 40 anos ou mais.
 
 H2: Os homens se interessaram mais pela proposta do que as mulheres.
 
-** Colocar img Homens_mais_interessados_na_proposta**
+<img src="https://github.com/Andre10DS/health_insurance_cross-sell/blob/main/img/Homens_mais_interessados_na_proposta.png?raw=true" alt="Homens_mais_interessados_na_proposta" title="Grafico dos homens mais interresados na proposta" align="center" height="500" class="center"/>
 
 Hipótese verdadeira: Os homens são mais interessados em adquirir a proposta do que as mulheres. Cerca de 61,2% da base que respondeu positivo eram homens.
 
 
 H3: Dos clientes interessados, tinham carros com mais de dois anos.
 
-** Colocar img Clientes_interessados**
+<img src="https://github.com/Andre10DS/health_insurance_cross-sell/blob/main/img/Clientes_interessados.png?raw=true" alt="Clientes_interessados" title="Grafico dos clientes interessados" align="center" height="500" class="center"/>
 
 Hipótese falsa: A demanda ocorre para veículos com idade entre 1 e 2 anos. Em relação à base de dados, esse tempo é considerado "mediano". O período de 1 a 2 anos concentra 74% dos interessados.
 
@@ -186,8 +186,11 @@ Os resultados obtidos com os dados de teste mostraram-se próximos aos dados de 
 
 A curva de ganho acumulado é outra ferramenta que pode demonstar a performance do modelo. Ela representa quantas clientes interresados estão em cada percentual da base ordenada pelo modelo. Um exemplo é quando analisamos que nos 20% da base ordenada se encontra aproximadamente 57% dos clientes interessados.
 
+<img src="https://github.com/Andre10DS/health_insurance_cross-sell/blob/main/img/Curva_AUC.png?raw=true" alt="Curva_AUC" title="Grafico da Curva de Ganho" align="center" height="500" class="center"/>
 
 A curva de lift demonstra o quando o modelo utilizada é mais eficiente do que o modelo de média. Desta forma, ao analisa o ponto 2 verificamos que ele é quase 3 vezes melhor do que o modelo de média.
+
+<img src="https://github.com/Andre10DS/health_insurance_cross-sell/blob/main/img/Curva_lift.png?raw=true" alt="Curva_lift" title="Grafico da Curva lift" align="center" height="500" class="center"/>
 
 
 # 7. Resultados para o negócio
@@ -206,6 +209,10 @@ A base de teste foi de 76222 sendo que destes um número de 9342 mostraram-se in
 Conforme as premissas de negócio, a estrutura terá a capacidade de realizar no máximo 20000 atendimentos. Desta forma, foi escolhido o cenário onde será executado as ações de vendas para somente 25% da base, ou seja, cerca de 19055 pessoas. Desta forma, com a utilização do modelo contruído neste projeto o resultado sairia de US$ -2,614,680 para US$ 3,604,002 representando um ganho de US$ 6,218,682.
 
 ### Entrega - Planilha Google Sheets
+
+<img src="/img/google_sheets_demo.gif" alt="Score" title="Demonstração da solução" align="center" height="600" class="center"/>
+
+Acesso a planilha: [Health Insurance Ranking](https://docs.google.com/spreadsheets/d/1nf3uN9mWBalgh6tdhDTqCtBfcORpiT4-amvjKXvwX1E/edit?usp=sharing)
 
 # 8. Conclusão
 
